@@ -1,0 +1,131 @@
+.limiter {
+  margin-top: 60px;
+    width: 100%;
+    margin-right: 0 auto;
+    margin-top: 0 auto;
+    margin-left: 0 auto;
+    
+  }
+  
+  .container-table100 {
+    width: 100%;
+    min-height: 100vh;
+
+  
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 33px 30px;
+    
+  }
+  
+  .wrap-table100 {
+    width: 1170px;
+  }
+
+  table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    opacity: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+  }
+  table * {
+    position: relative;
+  }
+  table td, table th {
+    padding-left: 8px;
+  }
+  table thead tr {
+    height: 60px;
+    background: #2b2b2b;
+  }
+  table tbody tr {
+    height: 50px;
+  }
+  table tbody tr:last-child {
+    border: 0;
+  }
+  table td, table th {
+    text-align: left;
+  }
+  table td.l, table th.l {
+    text-align: right;
+  }
+  table td.c, table th.c {
+    text-align: center;
+  }
+  table td.r, table th.r {
+    text-align: center;
+  }
+  
+  
+  .table100-head th{
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: unset;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  
+  tbody tr {
+    font-family: OpenSans-Regular;
+    font-size: 15px;
+    color: #747474;
+    line-height: 1.2;
+    font-weight: unset;
+  }
+  
+  tbody tr:hover {
+    color: d#363636;
+    background-color: #f5f5f5;
+    cursor: pointer;
+  }
+  
+  .column1 {
+    width: 10%;
+    padding-left: 40px;
+    text-align: left;
+  }
+  
+  .column2 {
+    width: 20%;
+    text-align: center;
+  }
+  
+  .column3 {
+    width: 20%;
+    text-align: center;
+  }
+  
+  .column4 {
+    width: 25%;
+    text-align: center;
+  }
+
+  .map {
+    height: 400px;
+    width: 400px;
+  }
+
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }

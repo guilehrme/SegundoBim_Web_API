@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
+    <title>Material Design for Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/admin.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+        integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Brand -->
+                <a class="navbar-brand" target="_blank" href="https://www.formula1.com/">
+                    <img src="img/F1.svg" height="25" alt="" loading="lazy" />
+                </a>
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarExample01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" target="_self" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tabela.html" rel="nofollow" target="_self">Pilotos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calendario.html" target="_self">Calendario</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="preferidos.html" rel="nofollow" target="_self">Escolha seu Preferido</a>
+                      </li>
+                    </ul>
+
+                    <!-- Right links -->
+                    <ul class="navbar-nav ms-auto d-flex flex-row">
+                        <!-- Icons -->
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link" href="https://www.youtube.com/channel/UCB_qr75-ydFVKSF9Dmo6izg"
+                                rel="nofollow" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link" href="https://www.facebook.com/Formula1/" rel="nofollow"
+                                target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link" href="https://twitter.com/f1" rel="nofollow" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+
+        <div id="intro" class="bg-image vh-100 shadow-1-strong">
+            <img src="img/951885.png">
+            <div class="mask" style="
+        background: linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.7),
+          rgba(0, 0, 0, 0.7) 100%
+        );
+      ">
+                <div class="container d-flex align-items-center justify-content-center text-center h-100">
+                    <div class="text-white">
+                        <h1 class="mb-3">Central F1</h1>
+                        <h5 class="mb-4">A central de informações mais completa sobre a formula 1, na opinião de seus
+                            desenvolvedores.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar -->
+    </header>
+
+    <main class="mt-5">
+        <div class="container">
+            <hr class="my-5" />
+
+            <!--Section: Content-->
+            <section class="text-center">
+                <h4 class="mb-5"><strong>Notícias</strong></h4>
+
+                <div class="row" id="noticias">
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="/www/img/1.jpg" class="img-fluid" />
+                            <a>
+                              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title" id="card1"></h5>
+                            <p class="card-text"id="card1text">
+                            </p>
+                            <a id="btnCard1" class="btn btn-primary">Ir para Notícia</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="/www/img/2.jpg" class="img-fluid" />
+                            <a>
+                              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title" id="card2"></h5>
+                            <p class="card-text"id="card2text">
+                            </p>
+                            <a id="btnCard2" class="btn btn-primary">Ir para Notícia</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+                          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="/www/img/3.jpg" class="img-fluid" />
+                            <a>
+                              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title" id="card3"></h5>
+                            <p class="card-text" id="card3text">
+                            </p>
+                            <a id="btnCard3" class="btn btn-primary">Ir para Notícia</a>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </section>
+            <!--Section: Content-->
+
+            <hr class="my-5" />
+    </main>
+    <!--Main layout-->
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/admin.js"></script>
+    <script type="text/javascript" src="js/news.js"></script>
+    <script>
+        $(document).ready(function () {
+            getNews();
+        });</script>
+</body>
+
+</html>
