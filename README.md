@@ -6,6 +6,25 @@
 	🚧  Aplicativo Pra ser Entregue...  🚧
 </h4>
 
+
+============================================================================================
+### APIs Próprias
+
+👉 [x] Cadastrar Usuários
+
+👉 [x] Consultar Pilotos Preferidos dos Usuários
+
+👉 [X] Consultar Pilotos Preferidos dos Usuários
+
+👉 [x] Editar cadastros dos Usuários e seus Pilotos Preferidos
+
+
+![image](https://user-images.githubusercontent.com/81174417/167468951-73baffd1-da8e-47c3-b863-78fc9f868361.png)
+Consulta (POST) no Postman da API com Status Code 200
+
+![image](https://user-images.githubusercontent.com/81174417/167471166-a0695559-f06b-43bd-974c-ecea6d42c084.png)
+Consulta (GET) no Postman da API com Status Code 200
+
 ============================================================================================
 ### Features
 
@@ -33,15 +52,17 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 👉 JDK 17: (https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 
-👉 Visual Code: https://code.visualstudio.com/download
-
 👉 Ergast Developer API: http://ergast.com/mrd/
  
 👉 Google Search API By apigeek: https://rapidapi.com/apigeek/api/google-search3
 
 👉 Open Layers: https://openlayers.org/
 
-👉 OPen Weather API: https://openweathermap.org/api
+👉 Open Weather API: https://openweathermap.org/api
+
+👉 Spring Boot (https://spring.io/projects/spring-boot)
+
+👉 IntelliJ (IDE - https://www.jetbrains.com/idea/download/#section=windows)
 
 
 ============================================================================================
