@@ -3,6 +3,7 @@ package LPIII_N2_WEB_API.dao;
 import LPIII_N2_WEB_API.model.User;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public interface UserDao {
@@ -19,4 +20,10 @@ public interface UserDao {
     int deleteUser(UUID id);
 
     int deleteUser();
+
+    Optional <User> getUserById(UUID id);
+    int deleteUserById(UUID id);
+    int updateUserById(UUID id);
+
+    int updateUserById(UUID id, User user);
 }

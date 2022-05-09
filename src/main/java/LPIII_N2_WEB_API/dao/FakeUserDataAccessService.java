@@ -7,13 +7,14 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 import java.sql.*;
 
 @Repository("fakeDao")
 public class FakeUserDataAccessService implements UserDao {
     private static List<User> DB = new ArrayList<>();
-    Connection connection = (Connection) ConnectionDB.conDB();
+    Connection connection = ConnectionDB.conDB();
     PreparedStatement preparedStatement;
 
     CallableStatement callableStatement;
@@ -85,4 +86,44 @@ public class FakeUserDataAccessService implements UserDao {
     public int deleteUser(){
         return 1;
     }
+
+    @Override
+    public Optional<User> getUserById(UUID id) {
+        return DB.stream()
+                .filter(user -> user.getId().equals(id))
+                .findFirst();
+    }
+    @Override
+    public int deleteUserById(UUID id) {
+        Optional<User> userExits = getUserById(id);
+        if (userExits.isEmpty()) {
+            return 0;
+        }
+        DB.remove(userExits.get());
+        return 1;
+
+    }
+
+    @Override
+    public int updateUserById(UUID id) {
+        return 0;
+    }
+
+    //Cuidado !!
+
+
+    @Override
+    public int updateUserById(UUID id, User user) {
+        return getUserById(id)
+                .map(u -> {
+                    int indexOfUserToUpdate = DB.indexOf(u);
+                    if (indexOfUserToUpdate >= 0) {
+                        DB.set(indexOfUserToUpdate, new User(id, user.getName(),user.getPilotoFav1(),user.getPilotoFav2(),user.getPilotoFav3()));
+                        return 1;
+                    }
+                    return 0;
+                })
+                .orElse(0);
+    }
+
 }

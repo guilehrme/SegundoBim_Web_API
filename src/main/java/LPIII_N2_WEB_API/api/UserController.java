@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 public class UserController {
@@ -28,5 +29,19 @@ public class UserController {
     @GetMapping
     public List<User> listUser() {
         return userService.listUser();
+    }
+
+    @GetMapping(path = "{id}")
+    public User retrieveUserById(@PathVariable("id") UUID id) {
+        return userService.retrieveUserById(id)
+                .orElse(null);
+    }
+    @DeleteMapping(path = "{id}")
+    public void deleteUser(@PathVariable("id") UUID id) {
+        userService.deleteUser(id);
+    }
+    @PutMapping(path = "{id}")
+    public void updateUser(@PathVariable("id") UUID id, @RequestBody User user) {
+        userService.updateUser(id,user);
     }
 }
